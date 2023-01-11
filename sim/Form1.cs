@@ -85,7 +85,7 @@ namespace sim
                     if (mozgoreszek[i].collides(reszek[j]))
                     {                      
                         explode(reszek[j], mozgoreszek[i]);
-                        break;
+                        break; //enélkül nem megy xd
                     }
                 }
             }                  
@@ -101,7 +101,7 @@ namespace sim
                 int xvel = rand.Next(-3, 3);
                 int yvel = rand.Next(-3, 3);
                 if (xvel==0&&yvel==0)             
-                    break;              
+                    break;              //enélkül álló neutron
                 mozgoreszek.Add(new particle(reszecske.x, reszecske.y, 10, new vektor(xvel, yvel)));
             }
         }

@@ -28,19 +28,20 @@ namespace sim
             rect.Width = size;
             this.sebesseg = sebesseg;
         }
-        public void lép()
+        public void lép() //collision box + visual
         {
             x += sebesseg.x;
             rect.X += sebesseg.x;
             y += sebesseg.y;
             rect.Y += sebesseg.y;
         }
-        public bool collides(particle atom)
+        public bool collides(particle atom) //lazy fos négyzetre értelmezett beépitett collision
         {
             bool collision = false;
             if(this.rect.IntersectsWith(atom.rect)) { return true; }
             return collision;
         }
+        
         
 
     }
